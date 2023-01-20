@@ -1,5 +1,6 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use \Vimeo\ABLincoln\Experiments\AbstractExperiment;
 use \Vimeo\ABLincoln\Operators\Random as Random;
 use \Vimeo\ABLincoln\Experiments\Logging as Logging;
@@ -9,7 +10,7 @@ require_once 'TestLogger.php';
 /**
  * PHPUnit Experiment test class
  */
-class ExperimentTest extends \PHPUnit_Framework_TestCase
+class ExperimentTest extends TestCase
 {
     public function testVanillaExperiment()
     {

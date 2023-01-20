@@ -1,12 +1,13 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use \Vimeo\ABLincoln\Assignment;
 use \Vimeo\ABLincoln\Operators\Random as Random;
 
 /**
  * PHPUnit Assignment test class
  */
-class AssignmentTest extends \PHPUnit_Framework_TestCase
+class AssignmentTest extends TestCase
 {
     private $tester_unit = 4;
     private $tester_salt = 'test_salt';

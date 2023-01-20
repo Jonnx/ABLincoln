@@ -1,12 +1,13 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use \Vimeo\ABLincoln\Assignment;
 use \Vimeo\ABLincoln\Operators\Random as Random;
 
 /**
  * PHPUnit RandomOperator test class
  */
-class RandomOperatorTest extends \PHPUnit_Framework_TestCase
+class RandomOperatorTest extends TestCase
 {
     const Z = 3.29;  // z_(alpha/2) for alpha=.001, e.g. 99.9% CI: qnorm(1-(.001/2))
 
@@ -115,19 +116,22 @@ class RandomOperatorTest extends \PHPUnit_Framework_TestCase
     public function testFloat()
     {
         $N = 5;
-        $min = 0; $max = 1;
+        $min = 0;
+        $max = 1;
         FloatHelper::setArgs(['min' => $min, 'max' => $max]);
         for ($i = 0; $i < $N; $i++) {
             $f = FloatHelper::execute($i);
             $this->assertTrue($min <= $f && $f <= $max);
         }
-        $min = 5; $max = 7;
+        $min = 5;
+        $max = 7;
         FloatHelper::setArgs(['min' => $min, 'max' => $max]);
         for ($i = 0; $i < $N; $i++) {
             $f = FloatHelper::execute($i);
             $this->assertTrue($min <= $f && $f <= $max);
         }
-        $min = 2; $max = 2;
+        $min = 2;
+        $max = 2;
         FloatHelper::setArgs(['min' => $min, 'max' => $max]);
         for ($i = 0; $i < $N; $i++) {
             $f = FloatHelper::execute($i);
@@ -217,7 +221,9 @@ abstract class TestHelper
         self::$args = $args;
     }
 
-    public static function execute($i) {}
+    public static function execute($i)
+    {
+    }
 }
 
 class FloatHelper extends TestHelper

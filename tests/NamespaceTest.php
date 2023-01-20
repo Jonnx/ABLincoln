@@ -1,5 +1,6 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use \Vimeo\ABLincoln\Namespaces\SimpleNamespace;
 use \Vimeo\ABLincoln\Experiments\AbstractExperiment;
 use \Vimeo\ABLincoln\Operators\Random as Random;
@@ -8,7 +9,7 @@ use \Vimeo\ABLincoln\Experiments\Logging as Logging;
 /**
  * PHPUnit Namespace test class
  */
-class NamespaceTest extends \PHPUnit_Framework_TestCase
+class NamespaceTest extends TestCase
 {
     public function testVanillaNamespace()
     {
